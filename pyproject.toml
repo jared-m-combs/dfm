@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dfm"
+version = "1.0.0"
+description = "Simple dotfile manager."
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+keywords = ["dotfile"]
+authors = [
+  {name = "Jared Combs", email = "jared@logicvacuum.com"}
+]
+dependencies = []
+
+[project.optional-dependencies]
+test = [
+  "pytest >= 7.1.0",
+]
+
+[project.urls]
+repository = "https://github.com/jared-m-combs/dfm"
+
+[project.scripts]
+dfm = "dfm:main"
