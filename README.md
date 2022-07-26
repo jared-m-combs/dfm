@@ -1,8 +1,8 @@
 Tool for managing dotfiles in a separate directory with symlinks to
 their original locations. Includes commands for adding and removing
 files from this directory. An existing dotfiles directory can be
-bootstrapped with the ‘install’ command and all symlinks can be
-removed with the ‘uninstall’ command.
+bootstrapped with the `install` command and all symlinks can be
+removed with the `uninstall` command.
 
 usage: `dfm [-h] [--dotfiles DOTFILES] {add,a,remove,r,rm,install,i,uninstall,u} ...`
 
@@ -10,12 +10,12 @@ usage: `dfm [-h] [--dotfiles DOTFILES] {add,a,remove,r,rm,install,i,uninstall,u}
 options
 =======
 
---dotfiles, -d
+`--dotfiles`, `-d`
 
-   Directory where dotfiles are stored. Defaults to the ‘DOTFILE_HOME’
-   environment variable if specified or to ‘~/.dotfiles’ otherwise.
+   Directory where dotfiles are stored. Defaults to the `DOTFILE_HOME`
+   environment variable if specified or to `~/.dotfiles` otherwise.
 
-Default: “~/.dotfiles”
+Default: `~/.dotfiles`
 
 
 Sub-commands:
@@ -31,11 +31,9 @@ add (a)
    `dfm add [-h] paths [paths ...]`
 
 
-###Positional Arguments
+**Positional Arguments**
 
-paths
-
-   The paths of the files to add to the dotfiles directory.
+`paths` - The paths of the files to add to the dotfiles directory.
 
 
 remove (r, rm)
@@ -47,12 +45,9 @@ remove (r, rm)
    `dfm remove [-h] paths [paths ...]`
 
 
-###Positional Arguments
+**Positional Arguments**
 
-paths
-
-   The paths can be either the symlinks or the actual files in the
-   dotfiles directory.
+`paths` - The paths can be either the symlinks or the actual files in the dotfiles directory.
 
 
 install (i)
