@@ -113,7 +113,7 @@ The symlinks can be removed with the `uninstall` command.
 ```
 dfm --dotfiles ~/.existingdotfiles uninstall
 ```
-This command will not delete any files unless they are sylinks to 
+This command will not delete any files unless they are symlinks to 
 a file in the dotfiles directory.
 
 Contributing
