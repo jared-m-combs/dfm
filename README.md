@@ -93,6 +93,10 @@ dfm remove ~/.examplerc
 ls -al ~/.examplerc
 -rw-r--r-- 1 user user 0 Jul 28 13:52 ~/.examplerc
 ```
+The remove operation can also be used on the files in the dotfiles directory. e.g.
+```
+dfm remove ~/.dotfiles/examplerc
+```
 
 ### Bootstrapping
 Symlinks for an existing dotfiles directory can be created with the
