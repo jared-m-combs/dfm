@@ -26,7 +26,7 @@ def main(argv: list[str]) -> Status:
 def argparse() -> ArgumentParser:
     default_dotfiles_home = os.environ.get('DOTFILES_HOME', '~/.dotfiles') 
 
-    parser = ArgumentParser(prog='dwm', description="""
+    parser = ArgumentParser(prog='dfm', description="""
         Tool for managing dotfiles in a separate directory with symlinks to their original locations.
         Includes commands for adding files to and removing files from this directory.
         An existing dotfiles directory can be bootstrapped with the 'install' command and
