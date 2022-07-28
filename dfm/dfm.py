@@ -13,7 +13,7 @@ class Status(IntFlag):
     ERR = 1
 
 
-def main() -> int:
+def main():
     status = dfm(sys.argv[1:])
     sys.exit(status.value)
 
