@@ -15,7 +15,7 @@ class Status(IntFlag):
 
 def main(argv: list[str]) -> Status:
     args = argparse().parse_args(argv)
-    dotfiles_home = ensure_dir(args.dotfiles)
+    dotfiles_home = ensure_dir(Path(args.dotfiles))
     if hasattr(args, 'paths'):
         paths = (Path(p) for p in args.paths)
     else:
@@ -66,11 +66,11 @@ def err(path: Path, msg: str) -> Status:
     return Status.ERR
 
 
-def ensure_dir(path: str) -> Path:
-    p = Path(path).expanduser().resolve()
-    if not p.exists():
-        p.mkdir(parents = True)
-    return p
+def ensure_dir(path: Path) -> Path:
+    path = path.expanduser().resolve()
+    if not path.exists():
+        path.mkdir(parents = True)
+    return path
 
 
 def fold(dotfiles_home: Path, paths: Iterable[Path], op: Callable[[Path,Path],Status]) -> Status:
@@ -105,9 +105,7 @@ def add(dotfiles_home: Path, path: Path) -> Status:
     if dest_path.exists():
         return err(path, 'collides with existing file in dotfiles directory')
 
-    if not dest_path.parent.exists():
-        dest_path.parent.mkdir(parents=True)
-   
+    ensure_dir(dest_path.parent)
     shutil.move(str(src_path), str(dest_path))
     src_path.symlink_to(dest_path)
     return Status.OK
