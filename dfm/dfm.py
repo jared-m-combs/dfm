@@ -13,7 +13,12 @@ class Status(IntFlag):
     ERR = 1
 
 
-def main(argv: list[str]) -> Status:
+def main() -> int:
+    status = dfm(sys.argv[1:])
+    sys.exit(status.value)
+
+
+def dfm(argv: list[str]) -> Status:
     args = argparse().parse_args(argv)
     dotfiles_home = ensure_dir(Path(args.dotfiles))
     if hasattr(args, 'paths'):
@@ -172,4 +177,4 @@ def uninstall(dotfiles_home: Path, path: Path) -> Status:
 
 
 if __name__ == '__main__':
-    sys.exit(main(sys.argv[1:]).value)
+    main()
