@@ -47,8 +47,8 @@ positional arguments:
 options:
   -h, --help            show this help message and exit
   --dotfiles DOTFILES, -d DOTFILES
-                        Directory where dotfiles are stored. Defaults to the 'DOTFILE_HOME' environment variable if
-                        specified or to '~/.dotfiles' otherwise.
+                        Directory where dotfiles are stored. Defaults to the 'DOTFILE_HOME'
+                        environment variable if specified or to '~/.dotfiles' otherwise.
 ```
 ```                       
 usage: dfm add [-h] paths [paths ...]
