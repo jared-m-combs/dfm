@@ -119,7 +119,7 @@ a file in the dotfiles directory.
 Contributing
 ------------
 This script was created because I felt the existing dotfiles tools
-did more than I felt was necessary and I wanted something more
+did more than was necessary and I wanted something more
 minimal. I'm relucant to add more features to this script but feel
 free to fork or open a pull request and I'll consider it. This script
 is licensed with the [Unlicense](https://unlicense.org/) and you can
