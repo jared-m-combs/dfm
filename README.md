@@ -36,9 +36,12 @@ usage: dfm [-h] [--dotfiles DOTFILES] {add,a,remove,r,rm,install,i,uninstall,u} 
 
 positional arguments:
   {add,a,remove,r,rm,install,i,uninstall,u}
-    add (a)             Moves the file to the dotfiles directory and leaves a symlink in its place.
-    remove (r, rm)      Removes the symlink and restores the file from the dotfiles directory to its original location.
-    install (i)         Adds symlinks for all of the non-hidden files in the dotfiles directory.
+    add (a)             Moves the file to the dotfiles directory and leaves a 
+                        symlink in its place.
+    remove (r, rm)      Removes the symlink and restores the file from the dotfiles
+                        directory to its original location.
+    install (i)         Adds symlinks for all of the non-hidden files in the dotfiles
+                        directory.
     uninstall (u)       Removes symlinks for all of the files in the dotfiles directory.
 
 options:
