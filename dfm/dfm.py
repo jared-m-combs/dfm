@@ -39,7 +39,7 @@ def argparse() -> ArgumentParser:
         """)
 
     parser.add_argument('--dotfiles', '-d', default=default_dotfiles_home, help="""
-        Directory where dotfiles are stored. Defaults to the 'DOTFILE_HOME' \
+        Directory where dotfiles are stored. Defaults to the 'DOTFILES_HOME' \
         environment variable if specified or to '~/.dotfiles' otherwise.""")
     subparsers = parser.add_subparsers(required=True)
 
